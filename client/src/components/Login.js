@@ -18,7 +18,7 @@ const Login = () => {
     setLoading(true);
     setError('');
     try {
-      const { data } = await axios.post('http://localhost:5000/api/login', { email, password });
+      const { data } = await axios.post('https://comply-log.onrender.com/api/login', { email, password });
       localStorage.setItem('token', data.token);
       window.location.href ='https://complyv2.onrender.com/';
     } catch (err) {
